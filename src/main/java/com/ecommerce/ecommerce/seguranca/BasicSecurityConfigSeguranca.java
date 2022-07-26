@@ -49,6 +49,7 @@ public class BasicSecurityConfigSeguranca extends WebSecurityConfigurerAdapter {
 		.antMatchers("/usuarios/logar").permitAll()
 		.antMatchers("/usuarios/cadastrar").permitAll()
 		.antMatchers("/usuarios/all").permitAll()
+		.antMatchers(HttpMethod.DELETE, "/usuarios/**").permitAll()
 		.antMatchers(HttpMethod.GET, "/produtos/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/produtos/**").permitAll()
 		.antMatchers(HttpMethod.OPTIONS).permitAll()//para acertar no heroku
